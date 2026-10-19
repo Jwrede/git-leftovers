@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "git-leftovers"
+version = "0.1.0"
+description = "Find Git work that exists only on this machine before you hand over, leave a job or wipe a disk."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Jonathan Wrede" }]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+git-leftovers = "git_leftovers.cli:main"
+
+[tool.ruff]
+line-length = 120
